@@ -1,0 +1,96 @@
+.benefits-item{
+    max-width: 350px;
+    background-color: #0E8784;
+    margin-right: 30px;
+    &:last-child{
+        margin-right: 0;
+    }
+    border-radius: 8px;
+    padding: 200px 48px 48px 47px;
+    &::before{
+        content: '';
+        display: block;
+        width: 71px;
+        height: 72px;
+        background-image: url(../../img/coffe.svg);
+        top: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+    position: relative;
+    margin-bottom: -150px;
+}
+.benefits-item--gift::before{
+    background-image: url(../../img/gift.svg);
+}
+.benefits-item--free-shipping::before{
+    background-image: url(../../img/free-shipping.svg);
+    height: 50px;
+    top: 83px;
+}
+.benefits-item__title{
+    margin: 0;
+    margin-bottom: 24px;
+    color: $white;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+}
+.benefits-item__description{
+    margin: 0;
+    color: $white;
+    font-size: 16px;
+    line-height: 26px;
+}
+@media only screen and (max-width:$tablet){
+    .benefits-item{
+        max-width: 573px;
+        margin: 0;
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        padding: 41px 48px 41px 181px;
+        text-align: left;
+        &::before{
+            left: 70px;
+            top: 62px;
+            position: absolute;
+        }
+        position: relative;
+    }
+    .benefits-item--free-shipping::before{
+        top: 71px;
+        left: 70px;
+    }
+    .benefits-item__title{
+        margin: 0;
+        margin-bottom: 16px;
+    }
+    .benefits-item__description{
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+@media only screen and(max-width:$mobile){
+    .benefits-item{
+        max-width: 279px;
+        padding: 200px 12px 51px 12px;
+        text-align: center;
+        &::before{
+            top: 72px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .benefits-item--free-shipping::before{
+        top: 83px;
+    }
+    .benefits-item__title{
+        margin: 0;
+        margin-bottom: 24px;
+    }
+}

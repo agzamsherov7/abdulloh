@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 44px;
+    padding-bottom: 44px
+}
+.header__list{
+    @include box;
+}
+.header__list :last-child{
+    margin-right: 0;
+}
+.header__item{
+    margin-right: 33px;
+}
+.header__link{
+    color: $nav-link-colors;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}

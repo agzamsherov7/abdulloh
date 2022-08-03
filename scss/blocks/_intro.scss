@@ -1,0 +1,34 @@
+.intro{
+    @include padding;
+    padding-bottom: 132px;
+    background-image: url(../../img/intro-coffe-img.png);
+    margin-bottom: 136px;
+    border-radius: $big-radius;
+}
+.intro__content-wrapper{
+    width: 493px;
+}
+.intro__title{
+    margin: 0;
+    color: $white;
+    @include fransuer;
+    font-size: 72px;
+    line-height: 72px;
+}
+.intro__description{
+    @include styles;
+    color: $white;
+    margin: 0;
+    margin-top: 32px;
+    margin-bottom: 71px;
+}
+.intro__link{
+    padding: 15px 31px 16px 31px;
+    background-color: $green ;
+    border-radius: $sm-radius;
+    color: $white;
+    text-decoration: none;
+    @include fransuer;
+    font-size: 18px;
+    line-height: 25px;
+}

@@ -1,0 +1,20 @@
+.nav__list{
+    @include list-style;
+    display: flex;
+}
+.nav__item{
+    margin-right: 33px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.nav__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #83888F;
+}
+@media only screen and (max-width:$mobile){
+    .nav{
+        display: none;
+    }
+}
