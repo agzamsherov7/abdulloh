@@ -1,12 +1,15 @@
 .benefits-item{
     max-width: 350px;
-    background-color: #0E8784;
+    background-color: $green;
     margin-right: 30px;
-    &:last-child{
+    border-radius: 8px;
+    position: relative;
+    padding: 200px 48px 48px 47px;
+    color: $white;
+    &:last-child,
+    :nth-child(3n){
         margin-right: 0;
     }
-    border-radius: 8px;
-    padding: 200px 48px 48px 47px;
     &::before{
         content: '';
         display: block;
@@ -18,8 +21,6 @@
         transform: translateX(-50%);
         position: absolute;
     }
-    position: relative;
-    margin-bottom: -150px;
 }
 .benefits-item--gift::before{
     background-image: url(../../img/gift.svg);
@@ -32,7 +33,6 @@
 .benefits-item__title{
     margin: 0;
     margin-bottom: 24px;
-    color: $white;
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: 900;
@@ -41,7 +41,6 @@
 }
 .benefits-item__description{
     margin: 0;
-    color: $white;
     font-size: 16px;
     line-height: 26px;
 }
@@ -50,35 +49,23 @@
         max-width: 573px;
         margin: 0;
         margin-bottom: 24px;
-        &:last-child{
-            margin-bottom: 0;
-        }
         padding: 41px 48px 41px 181px;
         text-align: left;
+        &:last-child,
+        :nth-child(3n){
+            margin-bottom: 0;
+        }
         &::before{
             left: 70px;
-            top: 62px;
-            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
-        position: relative;
-    }
-    .benefits-item--free-shipping::before{
-        top: 71px;
-        left: 70px;
-    }
-    .benefits-item__title{
-        margin: 0;
-        margin-bottom: 16px;
-    }
-    .benefits-item__description{
-        font-size: 15px;
-        line-height: 25px;
     }
 }
-@media only screen and(max-width:$mobile){
+@media only screen and (max-width:$mobile){
     .benefits-item{
         max-width: 279px;
-        padding: 200px 12px 51px 12px;
+        padding: 200px 32px 51px;
         text-align: center;
         &::before{
             top: 72px;
@@ -86,11 +73,12 @@
             transform: translateX(-50%);
         }
     }
-    .benefits-item--free-shipping::before{
-        top: 83px;
-    }
     .benefits-item__title{
-        margin: 0;
-        margin-bottom: 24px;
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .benefits-item__description{
+        font-size: 15px;
+        line-height: 25px;
     }
 }
